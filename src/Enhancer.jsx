@@ -50,7 +50,11 @@ const Enhancer = () => {
                     <button className='bg-black text-[#F1F1EC] tracking-wide py-2 px-4 rounded-xl hover:text-black hover:border border-black hover:bg-[#F1F1EC]' onClick={handleEnhance}>ENHANCE</button>
                 </div>
             </div>
-            {spinner && <TailSpin color='black' />}
+            {spinner && 
+            <div class="fixed inset-0 z-10 flex justify-center items-center h-screen w-screen backdrop-blur-sm">
+                 <TailSpin color='black' />
+            </div>
+}
             {response && (
                 <div className='h-80 w-72 flex flex-col'>
                     <textarea className='border w-full h-full rounded-xl focus:outline-none p-5 bg-white' value={response} disabled></textarea>
